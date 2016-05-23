@@ -21,5 +21,16 @@ public class Main {
             store.put(random, "Wee");
             System.out.println(random);
         }
+
+        UrlShortener shortener = new UrlShortener("short.host");
+
+        String shortUrl = shortener.getShortUrl("http://google.com/moooop/mooop");
+        System.out.println(shortUrl);
+
+        String shortUrl2 = shortener.getShortUrl("http://google.com/moooop/mooop");
+        System.out.println(shortUrl2);
+
+        String longUrl = shortener.getLongUrl(shortUrl);
+        System.out.println(longUrl);
     }
 }

@@ -19,6 +19,7 @@ public class UniqueStringGenerator {
         this.characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
 
+    // Get a unique String according to the given store
     public String getUnique() {
         for (int i = 0; i < maxTries; i++) {
             String candidate = getRandom();
@@ -31,6 +32,7 @@ public class UniqueStringGenerator {
         return null;
     }
 
+    // Get any random String of a given length
     private String getRandom() {
         char[] randomChars = new char[stringLength];
 
